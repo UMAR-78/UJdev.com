@@ -1,0 +1,153 @@
+/* *{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	font-family: sans-serif;
+	font-style: italic;
+}
+li{
+	margin: 2%;
+}
+li a{
+	text-decoration: none;
+	font-size: 23px;
+	color: black;
+}
+li a:hover{
+	cursor: pointer;
+	color: #336699;
+}
+h1{
+	color: #336699;
+}
+.ww{
+	margin: 6%;
+} */
+* {
+  text-transform: capitalize;
+  box-sizing: border-box;
+}
+body {
+  background-color: brown;
+}
+.personal-card {
+  padding: 15px 0;
+  margin: 0 auto;
+}
+.container {
+  width: 650px;
+  height: 650px;
+  background-color: #eeeeee;
+  position: relative;
+  margin: 50px auto;
+  border-radius: 6px;
+}
+.container .info::after {
+  content: "a+";
+  background-color: #3b74ba;
+  width: 40px;
+  height: 30px;
+  position: absolute;
+  bottom: -10px;
+  right: 10px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-size: 22px;
+  border-radius: 4px;
+}
+.container .info img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-top: -138px;
+  margin-left: -125px;
+  width: 250px;
+}
+.info {
+  width: 480px;
+  height: 440px;
+  background-color: white;
+  position: relative;
+  top: 27%;
+  left: 45%;
+  margin-left: -200px;
+  margin-top: -40px;
+  border-radius: 6px;
+}
+.general-info {
+  position: absolute;
+  top: -5px;
+  left: 22%;
+  text-align: center;
+  border-bottom: 2px solid lightgray;
+}
+.general-info h1 {
+  color: #3b74ba;
+}
+.general-info p {
+  color: darkgray;
+  font-size: 30px;
+  margin-top: -15px;
+}
+.social-info p a {
+  text-decoration: none;
+  color: #3b74ba;
+  font-size: 21px;
+}
+.social-info {
+  display: grid;
+  grid-template-columns: 45% 45%;
+  background-color: #f6f6f6;
+  width: 86%;
+  padding: 15px;
+  font-size: 20px;
+  position: absolute;
+  top: 28%;
+  left: 7%;
+  row-gap: 3px;
+  justify-content: space-between;
+}
+.social-info p {
+  margin: 0 0 10px;
+  padding: 10px;
+}
+
+.social-info p a {
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+  margin-bottom: 5px;
+  padding-bottom: 6px;
+}
+
+.social-info p a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.4s ease-out;
+}
+
+.social-info p a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Remove underline and add scaling effect on hover for email and GitHub icons */
+.list ul li.email a {
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* To make the hover effect work properly */
+    transition: transform 0.2s ease-in-out; /* Add scaling effect on hover */
+}
+
+.list ul li.email a:hover {
+    transform: scale(1.1); /* Scale up the icon on hover */
+}
